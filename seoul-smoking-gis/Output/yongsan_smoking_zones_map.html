@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ba934e33b639d4a7e11a39c401e0c8f7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ba934e33b639d4a7e11a39c401e0c8f7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ba934e33b639d4a7e11a39c401e0c8f7 = L.map(
+                "map_ba934e33b639d4a7e11a39c401e0c8f7",
+                {
+                    center: [37.53682852631579, 126.97208069736843],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_87fb84caaf7a8fc3b36ce0b7f423b94a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_87fb84caaf7a8fc3b36ce0b7f423b94a.addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var marker_76930468324fbd36a907d8f571c293b7 = L.marker(
+                [37.553149, 126.968881],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_655181568fee650c5ce1109c57970d41 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_76930468324fbd36a907d8f571c293b7.setIcon(icon_655181568fee650c5ce1109c57970d41);
+        
+    
+        var popup_fcaf8146df3a59befd07ca4e76687479 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7693a786ab5fed70f8817a7346c6812f = $(`<div id="html_7693a786ab5fed70f8817a7346c6812f" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_fcaf8146df3a59befd07ca4e76687479.setContent(html_7693a786ab5fed70f8817a7346c6812f);
+            
+        
+
+        marker_76930468324fbd36a907d8f571c293b7.bindPopup(popup_fcaf8146df3a59befd07ca4e76687479)
+        ;
+
+        
+    
+    
+            var marker_3700fb5895cf653033b58c9aa6329df6 = L.marker(
+                [37.55376, 126.969662],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_d8453f7751ae5a6365731e0fe824ec55 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3700fb5895cf653033b58c9aa6329df6.setIcon(icon_d8453f7751ae5a6365731e0fe824ec55);
+        
+    
+        var popup_0e8cafe90d17fecc909bdecc2db9b1f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_91d3ff557b79efb0f3c06fafa0309309 = $(`<div id="html_91d3ff557b79efb0f3c06fafa0309309" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_0e8cafe90d17fecc909bdecc2db9b1f5.setContent(html_91d3ff557b79efb0f3c06fafa0309309);
+            
+        
+
+        marker_3700fb5895cf653033b58c9aa6329df6.bindPopup(popup_0e8cafe90d17fecc909bdecc2db9b1f5)
+        ;
+
+        
+    
+    
+            var marker_82b49c140ae8f4863b9f7b089b7e47a0 = L.marker(
+                [37.528404, 126.965569],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_7acbebd232766d3b27d42e6e59f72ec0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_82b49c140ae8f4863b9f7b089b7e47a0.setIcon(icon_7acbebd232766d3b27d42e6e59f72ec0);
+        
+    
+        var popup_9da3788a47a66aaf10f87ed8935aae76 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ec896b995492d4e9b33c03c8f569f72c = $(`<div id="html_ec896b995492d4e9b33c03c8f569f72c" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_9da3788a47a66aaf10f87ed8935aae76.setContent(html_ec896b995492d4e9b33c03c8f569f72c);
+            
+        
+
+        marker_82b49c140ae8f4863b9f7b089b7e47a0.bindPopup(popup_9da3788a47a66aaf10f87ed8935aae76)
+        ;
+
+        
+    
+    
+            var marker_6f3c564d27eb9dd6601db517513d6a2f = L.marker(
+                [37.532709, 126.99],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_67981fe6e675b82e96cd7168e7777519 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6f3c564d27eb9dd6601db517513d6a2f.setIcon(icon_67981fe6e675b82e96cd7168e7777519);
+        
+    
+        var popup_6449864a458c21bd01391299482468dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f8a916951e226b981e9ea610313e5dd1 = $(`<div id="html_f8a916951e226b981e9ea610313e5dd1" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_6449864a458c21bd01391299482468dc.setContent(html_f8a916951e226b981e9ea610313e5dd1);
+            
+        
+
+        marker_6f3c564d27eb9dd6601db517513d6a2f.bindPopup(popup_6449864a458c21bd01391299482468dc)
+        ;
+
+        
+    
+    
+            var marker_8ffe146e1ad93dfd025b9b0ca849a70c = L.marker(
+                [37.532709, 126.99],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_c5c728d39ecdfca45c8c85d85000dec7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8ffe146e1ad93dfd025b9b0ca849a70c.setIcon(icon_c5c728d39ecdfca45c8c85d85000dec7);
+        
+    
+        var popup_468b2b60bf2f468e740f83bd37f71e96 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fd2e7feed2e08cecc998cc917c76b961 = $(`<div id="html_fd2e7feed2e08cecc998cc917c76b961" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_468b2b60bf2f468e740f83bd37f71e96.setContent(html_fd2e7feed2e08cecc998cc917c76b961);
+            
+        
+
+        marker_8ffe146e1ad93dfd025b9b0ca849a70c.bindPopup(popup_468b2b60bf2f468e740f83bd37f71e96)
+        ;
+
+        
+    
+    
+            var marker_ac889a378c819d539118e7bff8bbdd04 = L.marker(
+                [37.541169, 126.96765],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_a6d10868e94fd589355a05e2f1c0007d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ac889a378c819d539118e7bff8bbdd04.setIcon(icon_a6d10868e94fd589355a05e2f1c0007d);
+        
+    
+        var popup_5703c24f791b9d12a8ac4d3a16b47978 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df13e7770cc88c4325c12c129013d603 = $(`<div id="html_df13e7770cc88c4325c12c129013d603" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_5703c24f791b9d12a8ac4d3a16b47978.setContent(html_df13e7770cc88c4325c12c129013d603);
+            
+        
+
+        marker_ac889a378c819d539118e7bff8bbdd04.bindPopup(popup_5703c24f791b9d12a8ac4d3a16b47978)
+        ;
+
+        
+    
+    
+            var marker_f21e433f1f803de6981c70711e063d52 = L.marker(
+                [37.538716, 126.96589],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_df1eb72dbd41eb3eacb488ca6ad59b6b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f21e433f1f803de6981c70711e063d52.setIcon(icon_df1eb72dbd41eb3eacb488ca6ad59b6b);
+        
+    
+        var popup_ce2cc6c036bd9923cbfe1e9c0ef436b4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d63f72a228821d46bf00c7024caf9f27 = $(`<div id="html_d63f72a228821d46bf00c7024caf9f27" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_ce2cc6c036bd9923cbfe1e9c0ef436b4.setContent(html_d63f72a228821d46bf00c7024caf9f27);
+            
+        
+
+        marker_f21e433f1f803de6981c70711e063d52.bindPopup(popup_ce2cc6c036bd9923cbfe1e9c0ef436b4)
+        ;
+
+        
+    
+    
+            var marker_048f979777ad2bcbbdc6f0d4dfb8c730 = L.marker(
+                [37.534923, 126.974192],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_eeca71ce329f34061ddeefe78ed75074 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_048f979777ad2bcbbdc6f0d4dfb8c730.setIcon(icon_eeca71ce329f34061ddeefe78ed75074);
+        
+    
+        var popup_c7b59010ac3973674c975ba48e64eecf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d88abd2f2bb59c63293d4bd30e2085f = $(`<div id="html_4d88abd2f2bb59c63293d4bd30e2085f" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_c7b59010ac3973674c975ba48e64eecf.setContent(html_4d88abd2f2bb59c63293d4bd30e2085f);
+            
+        
+
+        marker_048f979777ad2bcbbdc6f0d4dfb8c730.bindPopup(popup_c7b59010ac3973674c975ba48e64eecf)
+        ;
+
+        
+    
+    
+            var marker_32dee38d738e39dbb793f6fb8fac003a = L.marker(
+                [37.523302, 126.96868],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_033708b291eed1e105a188979ed26c89 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_32dee38d738e39dbb793f6fb8fac003a.setIcon(icon_033708b291eed1e105a188979ed26c89);
+        
+    
+        var popup_7ac80f541cdf8a323be1e2b807dc511d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d35af65286cf0eef16e51a5151ecd902 = $(`<div id="html_d35af65286cf0eef16e51a5151ecd902" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_7ac80f541cdf8a323be1e2b807dc511d.setContent(html_d35af65286cf0eef16e51a5151ecd902);
+            
+        
+
+        marker_32dee38d738e39dbb793f6fb8fac003a.bindPopup(popup_7ac80f541cdf8a323be1e2b807dc511d)
+        ;
+
+        
+    
+    
+            var marker_711885e632cec9d3a8877ba845b2015d = L.marker(
+                [37.533237, 126.97859],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_f41f4e6b2cb747898b98613774a64c50 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_711885e632cec9d3a8877ba845b2015d.setIcon(icon_f41f4e6b2cb747898b98613774a64c50);
+        
+    
+        var popup_4f5049c6c92265182c13d298665ccdf6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_37482c66bb6739a6af3731b1192b5498 = $(`<div id="html_37482c66bb6739a6af3731b1192b5498" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_4f5049c6c92265182c13d298665ccdf6.setContent(html_37482c66bb6739a6af3731b1192b5498);
+            
+        
+
+        marker_711885e632cec9d3a8877ba845b2015d.bindPopup(popup_4f5049c6c92265182c13d298665ccdf6)
+        ;
+
+        
+    
+    
+            var marker_521b5d18000c27777a37f542c555a8ef = L.marker(
+                [37.534466, 127.004585],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_240609f638e431887de1415db9f7b15a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_521b5d18000c27777a37f542c555a8ef.setIcon(icon_240609f638e431887de1415db9f7b15a);
+        
+    
+        var popup_b8d34ca2db87681af1af48ef6008f8b9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_75233f88fce54bbfe693de82b0398593 = $(`<div id="html_75233f88fce54bbfe693de82b0398593" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_b8d34ca2db87681af1af48ef6008f8b9.setContent(html_75233f88fce54bbfe693de82b0398593);
+            
+        
+
+        marker_521b5d18000c27777a37f542c555a8ef.bindPopup(popup_b8d34ca2db87681af1af48ef6008f8b9)
+        ;
+
+        
+    
+    
+            var marker_c3c5a9681574ef9d980268db2083317e = L.marker(
+                [37.534009, 127.004334],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_24cebcecc799ad8660efb0dacdaf58dc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c3c5a9681574ef9d980268db2083317e.setIcon(icon_24cebcecc799ad8660efb0dacdaf58dc);
+        
+    
+        var popup_d46c67070191d332866e62cd8ce3ead8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c0b41921dce8952d159f7a5b70871e4e = $(`<div id="html_c0b41921dce8952d159f7a5b70871e4e" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_d46c67070191d332866e62cd8ce3ead8.setContent(html_c0b41921dce8952d159f7a5b70871e4e);
+            
+        
+
+        marker_c3c5a9681574ef9d980268db2083317e.bindPopup(popup_d46c67070191d332866e62cd8ce3ead8)
+        ;
+
+        
+    
+    
+            var marker_f81d1ad3ad7d5320e517293d30b4c08a = L.marker(
+                [37.539372, 126.997264],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_30e2d59138b116514a168774a99c671d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f81d1ad3ad7d5320e517293d30b4c08a.setIcon(icon_30e2d59138b116514a168774a99c671d);
+        
+    
+        var popup_82e6e01e704e4da9f73eef51c9dbaf3a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c54a386eb58b1e7f6e23c7a01b03c723 = $(`<div id="html_c54a386eb58b1e7f6e23c7a01b03c723" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_82e6e01e704e4da9f73eef51c9dbaf3a.setContent(html_c54a386eb58b1e7f6e23c7a01b03c723);
+            
+        
+
+        marker_f81d1ad3ad7d5320e517293d30b4c08a.bindPopup(popup_82e6e01e704e4da9f73eef51c9dbaf3a)
+        ;
+
+        
+    
+    
+            var marker_ba5f5f62e29f466d2646aae08132e66f = L.marker(
+                [37.529492, 126.964318],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_120f9126861987c582ea9fd53c6e0f44 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ba5f5f62e29f466d2646aae08132e66f.setIcon(icon_120f9126861987c582ea9fd53c6e0f44);
+        
+    
+        var popup_0c4254259779d88332fed06208efa8ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f25722e80d72a217b91931b7f38f538 = $(`<div id="html_3f25722e80d72a217b91931b7f38f538" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_0c4254259779d88332fed06208efa8ff.setContent(html_3f25722e80d72a217b91931b7f38f538);
+            
+        
+
+        marker_ba5f5f62e29f466d2646aae08132e66f.bindPopup(popup_0c4254259779d88332fed06208efa8ff)
+        ;
+
+        
+    
+    
+            var marker_238588bc0429e3efc308136666aef041 = L.marker(
+                [37.529492, 126.964318],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_f9fdd3fccdcc6a304c9fa75c235a477f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_238588bc0429e3efc308136666aef041.setIcon(icon_f9fdd3fccdcc6a304c9fa75c235a477f);
+        
+    
+        var popup_b71ef2f705ddf23ddaa042ca9940579e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f92c82bb5f733b74f5066ac9d0275ee6 = $(`<div id="html_f92c82bb5f733b74f5066ac9d0275ee6" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_b71ef2f705ddf23ddaa042ca9940579e.setContent(html_f92c82bb5f733b74f5066ac9d0275ee6);
+            
+        
+
+        marker_238588bc0429e3efc308136666aef041.bindPopup(popup_b71ef2f705ddf23ddaa042ca9940579e)
+        ;
+
+        
+    
+    
+            var marker_8004f0283994c77f6106219d7cbe0674 = L.marker(
+                [37.529492, 126.964318],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_85e450d29bf1e3013e3a16eed57278e6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8004f0283994c77f6106219d7cbe0674.setIcon(icon_85e450d29bf1e3013e3a16eed57278e6);
+        
+    
+        var popup_d900be24f2183477fadb6295a02ae87d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8504c7557ec072cf2e51e41b3aad6ede = $(`<div id="html_8504c7557ec072cf2e51e41b3aad6ede" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_d900be24f2183477fadb6295a02ae87d.setContent(html_8504c7557ec072cf2e51e41b3aad6ede);
+            
+        
+
+        marker_8004f0283994c77f6106219d7cbe0674.bindPopup(popup_d900be24f2183477fadb6295a02ae87d)
+        ;
+
+        
+    
+    
+            var marker_dc9bcf6b25bce89b0da3df8d6e49b4cf = L.marker(
+                [37.533068, 126.963521],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_68d6668239993a4ffd98100c158f1be8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_dc9bcf6b25bce89b0da3df8d6e49b4cf.setIcon(icon_68d6668239993a4ffd98100c158f1be8);
+        
+    
+        var popup_c78b9f62f8f1104c186601a0b5929dcb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f0d8b99fc68317d808d1bf7b0f452917 = $(`<div id="html_f0d8b99fc68317d808d1bf7b0f452917" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_c78b9f62f8f1104c186601a0b5929dcb.setContent(html_f0d8b99fc68317d808d1bf7b0f452917);
+            
+        
+
+        marker_dc9bcf6b25bce89b0da3df8d6e49b4cf.bindPopup(popup_c78b9f62f8f1104c186601a0b5929dcb)
+        ;
+
+        
+    
+    
+            var marker_6b1217c570df3c210e63f8377deba564 = L.marker(
+                [37.533068, 126.963521],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_221c6d09a44c3293fa4e9abadf45e254 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6b1217c570df3c210e63f8377deba564.setIcon(icon_221c6d09a44c3293fa4e9abadf45e254);
+        
+    
+        var popup_dfa213b03a2a715e6d71e84f2fe7b9b9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b765b1b4ea9a7ef1013b6ca92a235171 = $(`<div id="html_b765b1b4ea9a7ef1013b6ca92a235171" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_dfa213b03a2a715e6d71e84f2fe7b9b9.setContent(html_b765b1b4ea9a7ef1013b6ca92a235171);
+            
+        
+
+        marker_6b1217c570df3c210e63f8377deba564.bindPopup(popup_dfa213b03a2a715e6d71e84f2fe7b9b9)
+        ;
+
+        
+    
+    
+            var marker_9cab32b6713d8155149dd2606fa68e5e = L.marker(
+                [37.533417, 126.96736],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_bbac8a3fc99e1c935e5425f4ee9b79c9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9cab32b6713d8155149dd2606fa68e5e.setIcon(icon_bbac8a3fc99e1c935e5425f4ee9b79c9);
+        
+    
+        var popup_01608a97e370ab1314ffca4c170ab2d7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0f7517ba3d91e38052bfe5a15ce6f81d = $(`<div id="html_0f7517ba3d91e38052bfe5a15ce6f81d" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_01608a97e370ab1314ffca4c170ab2d7.setContent(html_0f7517ba3d91e38052bfe5a15ce6f81d);
+            
+        
+
+        marker_9cab32b6713d8155149dd2606fa68e5e.bindPopup(popup_01608a97e370ab1314ffca4c170ab2d7)
+        ;
+
+        
+    
+    
+            var marker_e5e048fb040c85efa71eb0192a4b3093 = L.marker(
+                [37.532818, 126.958895],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_d4696f96d6a936e7d4631cc4ac14e4e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e5e048fb040c85efa71eb0192a4b3093.setIcon(icon_d4696f96d6a936e7d4631cc4ac14e4e0);
+        
+    
+        var popup_c58f22efbc867c1d1dea2706f1825fd0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0305758e74153c6b4f35fe496f065bbf = $(`<div id="html_0305758e74153c6b4f35fe496f065bbf" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_c58f22efbc867c1d1dea2706f1825fd0.setContent(html_0305758e74153c6b4f35fe496f065bbf);
+            
+        
+
+        marker_e5e048fb040c85efa71eb0192a4b3093.bindPopup(popup_c58f22efbc867c1d1dea2706f1825fd0)
+        ;
+
+        
+    
+    
+            var marker_2ae9cfdd5c8078fbd68bb56bf5e01c5d = L.marker(
+                [37.52911, 126.968532],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_f22f93f1ad620d5382324f417d2ed819 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2ae9cfdd5c8078fbd68bb56bf5e01c5d.setIcon(icon_f22f93f1ad620d5382324f417d2ed819);
+        
+    
+        var popup_c923edbff0c0386a989c8a10d61b2a22 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a9bcf802246f95cd1d4f40fe0fba9ab = $(`<div id="html_7a9bcf802246f95cd1d4f40fe0fba9ab" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_c923edbff0c0386a989c8a10d61b2a22.setContent(html_7a9bcf802246f95cd1d4f40fe0fba9ab);
+            
+        
+
+        marker_2ae9cfdd5c8078fbd68bb56bf5e01c5d.bindPopup(popup_c923edbff0c0386a989c8a10d61b2a22)
+        ;
+
+        
+    
+    
+            var marker_3eb94cd8b041688215ba461acbaa1e52 = L.marker(
+                [37.535103, 126.998616],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_406c22be767dbb2115d96aba8960284a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3eb94cd8b041688215ba461acbaa1e52.setIcon(icon_406c22be767dbb2115d96aba8960284a);
+        
+    
+        var popup_879bfd969d226c912a573c198c0d4beb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_067badffe80403900f3500073db1b283 = $(`<div id="html_067badffe80403900f3500073db1b283" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_879bfd969d226c912a573c198c0d4beb.setContent(html_067badffe80403900f3500073db1b283);
+            
+        
+
+        marker_3eb94cd8b041688215ba461acbaa1e52.bindPopup(popup_879bfd969d226c912a573c198c0d4beb)
+        ;
+
+        
+    
+    
+            var marker_7cad74cab9af2fdc3a1dcaa95ded7897 = L.marker(
+                [37.536678, 126.961147],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_1ca00a2b4b4886339d5e5f973c7bcb76 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7cad74cab9af2fdc3a1dcaa95ded7897.setIcon(icon_1ca00a2b4b4886339d5e5f973c7bcb76);
+        
+    
+        var popup_985fbafed06e4292c9a80c9dbdd596c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d2af78c7d755caed9772dd81a298bb6 = $(`<div id="html_1d2af78c7d755caed9772dd81a298bb6" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_985fbafed06e4292c9a80c9dbdd596c2.setContent(html_1d2af78c7d755caed9772dd81a298bb6);
+            
+        
+
+        marker_7cad74cab9af2fdc3a1dcaa95ded7897.bindPopup(popup_985fbafed06e4292c9a80c9dbdd596c2)
+        ;
+
+        
+    
+    
+            var marker_13427a1a7cc7f2656585b6a282e0498b = L.marker(
+                [37.538329, 126.959979],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_4c955eb70a455b5cb9eb39ef2d4f0d3f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_13427a1a7cc7f2656585b6a282e0498b.setIcon(icon_4c955eb70a455b5cb9eb39ef2d4f0d3f);
+        
+    
+        var popup_75502ab10b58feef8980a8d3a2d09c4b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ae4c120cdb1751692ecef8b2d113fcde = $(`<div id="html_ae4c120cdb1751692ecef8b2d113fcde" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_75502ab10b58feef8980a8d3a2d09c4b.setContent(html_ae4c120cdb1751692ecef8b2d113fcde);
+            
+        
+
+        marker_13427a1a7cc7f2656585b6a282e0498b.bindPopup(popup_75502ab10b58feef8980a8d3a2d09c4b)
+        ;
+
+        
+    
+    
+            var marker_cc5b0e4c9fd073801538060d5e03defd = L.marker(
+                [37.533234, 126.957656],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_b5f1ee739407c388bb2cb9c50f300a09 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_cc5b0e4c9fd073801538060d5e03defd.setIcon(icon_b5f1ee739407c388bb2cb9c50f300a09);
+        
+    
+        var popup_3a460183df64db731caf34555bc93bc4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ec1994a98fecaddad92940db994d00a = $(`<div id="html_6ec1994a98fecaddad92940db994d00a" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_3a460183df64db731caf34555bc93bc4.setContent(html_6ec1994a98fecaddad92940db994d00a);
+            
+        
+
+        marker_cc5b0e4c9fd073801538060d5e03defd.bindPopup(popup_3a460183df64db731caf34555bc93bc4)
+        ;
+
+        
+    
+    
+            var marker_ffd61696b2d14b09911e44ed53544630 = L.marker(
+                [37.534626, 126.959002],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_380a035349e4622b390168717a3e00cc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ffd61696b2d14b09911e44ed53544630.setIcon(icon_380a035349e4622b390168717a3e00cc);
+        
+    
+        var popup_1e2109665ef30efe8da74a659c99eb48 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d6633e1ec717df67ed11b9236facaca5 = $(`<div id="html_d6633e1ec717df67ed11b9236facaca5" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_1e2109665ef30efe8da74a659c99eb48.setContent(html_d6633e1ec717df67ed11b9236facaca5);
+            
+        
+
+        marker_ffd61696b2d14b09911e44ed53544630.bindPopup(popup_1e2109665ef30efe8da74a659c99eb48)
+        ;
+
+        
+    
+    
+            var marker_3dbac08fe570c1ff96770dccf2885ac1 = L.marker(
+                [37.533918, 126.95763],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_ff52ceb767e3685cb448f10900c463dd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3dbac08fe570c1ff96770dccf2885ac1.setIcon(icon_ff52ceb767e3685cb448f10900c463dd);
+        
+    
+        var popup_6114d92aa4b1886bf29c91d31ce5ee96 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba0d607e532d23f787689762a8257b78 = $(`<div id="html_ba0d607e532d23f787689762a8257b78" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_6114d92aa4b1886bf29c91d31ce5ee96.setContent(html_ba0d607e532d23f787689762a8257b78);
+            
+        
+
+        marker_3dbac08fe570c1ff96770dccf2885ac1.bindPopup(popup_6114d92aa4b1886bf29c91d31ce5ee96)
+        ;
+
+        
+    
+    
+            var marker_a6d7ef205e00fa6c77dba3b9e962778b = L.marker(
+                [37.531999, 126.953751],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_606e75a5bfb0a1549f9f9f9c9fe1e7c8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a6d7ef205e00fa6c77dba3b9e962778b.setIcon(icon_606e75a5bfb0a1549f9f9f9c9fe1e7c8);
+        
+    
+        var popup_0c89f3e271f49b48d181ae99df277d83 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_49d57af4d56628a1011b970a572df360 = $(`<div id="html_49d57af4d56628a1011b970a572df360" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_0c89f3e271f49b48d181ae99df277d83.setContent(html_49d57af4d56628a1011b970a572df360);
+            
+        
+
+        marker_a6d7ef205e00fa6c77dba3b9e962778b.bindPopup(popup_0c89f3e271f49b48d181ae99df277d83)
+        ;
+
+        
+    
+    
+            var marker_b6c8257845c71a96ab20745cefbf89a7 = L.marker(
+                [37.53461, 126.966177],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_b71d870141d5bdf003e11edaed992e7d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b6c8257845c71a96ab20745cefbf89a7.setIcon(icon_b71d870141d5bdf003e11edaed992e7d);
+        
+    
+        var popup_622c5cc394f142fb6e5dd066f6eb904a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_150f320762d89f225160c2dbe223dc8a = $(`<div id="html_150f320762d89f225160c2dbe223dc8a" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_622c5cc394f142fb6e5dd066f6eb904a.setContent(html_150f320762d89f225160c2dbe223dc8a);
+            
+        
+
+        marker_b6c8257845c71a96ab20745cefbf89a7.bindPopup(popup_622c5cc394f142fb6e5dd066f6eb904a)
+        ;
+
+        
+    
+    
+            var marker_e2882063d6b45e53e3fc285509e7c53a = L.marker(
+                [37.538839, 126.968402],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_003beff69931b12fb0279abc8b9a9b57 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e2882063d6b45e53e3fc285509e7c53a.setIcon(icon_003beff69931b12fb0279abc8b9a9b57);
+        
+    
+        var popup_265005e8a851ae81214808c6f29da46d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb19cbd4f9b2e8684594e79f13ca8ac0 = $(`<div id="html_bb19cbd4f9b2e8684594e79f13ca8ac0" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_265005e8a851ae81214808c6f29da46d.setContent(html_bb19cbd4f9b2e8684594e79f13ca8ac0);
+            
+        
+
+        marker_e2882063d6b45e53e3fc285509e7c53a.bindPopup(popup_265005e8a851ae81214808c6f29da46d)
+        ;
+
+        
+    
+    
+            var marker_b90c1f587ab8ac19d401623757b4c011 = L.marker(
+                [37.538839, 126.968402],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_44b64dbe710c8c77c36fd287c8eb314e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b90c1f587ab8ac19d401623757b4c011.setIcon(icon_44b64dbe710c8c77c36fd287c8eb314e);
+        
+    
+        var popup_1def62fb7086a37eeffa742d089c9a7a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9470b8cfc90fb52709e3ddc48b0bba3e = $(`<div id="html_9470b8cfc90fb52709e3ddc48b0bba3e" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_1def62fb7086a37eeffa742d089c9a7a.setContent(html_9470b8cfc90fb52709e3ddc48b0bba3e);
+            
+        
+
+        marker_b90c1f587ab8ac19d401623757b4c011.bindPopup(popup_1def62fb7086a37eeffa742d089c9a7a)
+        ;
+
+        
+    
+    
+            var marker_4f6acf3abac6fe08214b068d9fcb6290 = L.marker(
+                [37.536223, 126.963549],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_19b5dc0d2bbd5d25eed8e4e88e337b44 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_4f6acf3abac6fe08214b068d9fcb6290.setIcon(icon_19b5dc0d2bbd5d25eed8e4e88e337b44);
+        
+    
+        var popup_8f7d32233b86ee190b28595083187158 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_19b19e918ab169ea4fbf109dc7b379f2 = $(`<div id="html_19b19e918ab169ea4fbf109dc7b379f2" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_8f7d32233b86ee190b28595083187158.setContent(html_19b19e918ab169ea4fbf109dc7b379f2);
+            
+        
+
+        marker_4f6acf3abac6fe08214b068d9fcb6290.bindPopup(popup_8f7d32233b86ee190b28595083187158)
+        ;
+
+        
+    
+    
+            var marker_267dba6c2e87ee462217c23b44c63e95 = L.marker(
+                [37.534709, 126.960734],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_0d344f7d4a949d3ff6f4b223fe95e4b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_267dba6c2e87ee462217c23b44c63e95.setIcon(icon_0d344f7d4a949d3ff6f4b223fe95e4b2);
+        
+    
+        var popup_5b21764637e8af77bb13352bb8f89095 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a562ab434dd59963cd3ac2396320e13 = $(`<div id="html_0a562ab434dd59963cd3ac2396320e13" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_5b21764637e8af77bb13352bb8f89095.setContent(html_0a562ab434dd59963cd3ac2396320e13);
+            
+        
+
+        marker_267dba6c2e87ee462217c23b44c63e95.bindPopup(popup_5b21764637e8af77bb13352bb8f89095)
+        ;
+
+        
+    
+    
+            var marker_9ae7aa3511e17c419710469192d6065a = L.marker(
+                [37.535767, 126.969873],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_ecae97df90b884610756404155371e6a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9ae7aa3511e17c419710469192d6065a.setIcon(icon_ecae97df90b884610756404155371e6a);
+        
+    
+        var popup_e3800a9bfe4434a941efd102419ff7eb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_babc6972234e9e25d97fc70ba340d38a = $(`<div id="html_babc6972234e9e25d97fc70ba340d38a" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_e3800a9bfe4434a941efd102419ff7eb.setContent(html_babc6972234e9e25d97fc70ba340d38a);
+            
+        
+
+        marker_9ae7aa3511e17c419710469192d6065a.bindPopup(popup_e3800a9bfe4434a941efd102419ff7eb)
+        ;
+
+        
+    
+    
+            var marker_d159b859059573929ea922ea79830cfe = L.marker(
+                [37.536202, 126.969268],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_69b0d8bdce0332184a799d4d320d4d66 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d159b859059573929ea922ea79830cfe.setIcon(icon_69b0d8bdce0332184a799d4d320d4d66);
+        
+    
+        var popup_8587d2f84ae84a43761f6e3cc357c533 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b69e859b55723fde747d0439a5047032 = $(`<div id="html_b69e859b55723fde747d0439a5047032" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_8587d2f84ae84a43761f6e3cc357c533.setContent(html_b69e859b55723fde747d0439a5047032);
+            
+        
+
+        marker_d159b859059573929ea922ea79830cfe.bindPopup(popup_8587d2f84ae84a43761f6e3cc357c533)
+        ;
+
+        
+    
+    
+            var marker_792dcda4707e7f40dc69d9fe7d14a2bc = L.marker(
+                [37.534231, 126.961404],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_f6a3e648021cd389ba5930c6b127083e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_792dcda4707e7f40dc69d9fe7d14a2bc.setIcon(icon_f6a3e648021cd389ba5930c6b127083e);
+        
+    
+        var popup_430adab7845cb2f341506c01b71fd050 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4405e5feed99660e5d7f0aca3cea38ad = $(`<div id="html_4405e5feed99660e5d7f0aca3cea38ad" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_430adab7845cb2f341506c01b71fd050.setContent(html_4405e5feed99660e5d7f0aca3cea38ad);
+            
+        
+
+        marker_792dcda4707e7f40dc69d9fe7d14a2bc.bindPopup(popup_430adab7845cb2f341506c01b71fd050)
+        ;
+
+        
+    
+    
+            var marker_3c885065c82cffdcb4ac4b5da269a348 = L.marker(
+                [37.531685, 126.970651],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_bc4c2744e83ff1bb55454034a406e76d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3c885065c82cffdcb4ac4b5da269a348.setIcon(icon_bc4c2744e83ff1bb55454034a406e76d);
+        
+    
+        var popup_55a273c57204d3da5cc1e2aa2611f49b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_507965f519025ee29a6818f525fdb1fc = $(`<div id="html_507965f519025ee29a6818f525fdb1fc" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_55a273c57204d3da5cc1e2aa2611f49b.setContent(html_507965f519025ee29a6818f525fdb1fc);
+            
+        
+
+        marker_3c885065c82cffdcb4ac4b5da269a348.bindPopup(popup_55a273c57204d3da5cc1e2aa2611f49b)
+        ;
+
+        
+    
+    
+            var marker_39834409840ef0921faf97cf45fca8ff = L.marker(
+                [37.534144, 126.964859],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_81b582094e25faec7bfb9cb281c3d36c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_39834409840ef0921faf97cf45fca8ff.setIcon(icon_81b582094e25faec7bfb9cb281c3d36c);
+        
+    
+        var popup_a8c8cb097c67d8df5228034bdaf20683 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_87c648f9ae7a44df3bbb6eaace4520aa = $(`<div id="html_87c648f9ae7a44df3bbb6eaace4520aa" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_a8c8cb097c67d8df5228034bdaf20683.setContent(html_87c648f9ae7a44df3bbb6eaace4520aa);
+            
+        
+
+        marker_39834409840ef0921faf97cf45fca8ff.bindPopup(popup_a8c8cb097c67d8df5228034bdaf20683)
+        ;
+
+        
+    
+    
+            var marker_6226073d7abcae0ff808f55a775b1f98 = L.marker(
+                [37.531399, 126.955431],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_c981f1384b1408ccffd8ea3a5a2c5c6c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6226073d7abcae0ff808f55a775b1f98.setIcon(icon_c981f1384b1408ccffd8ea3a5a2c5c6c);
+        
+    
+        var popup_f6dbd8e83e6c789d05febfffe02305a1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b1f6acadc895b48eebca7f9a9629173 = $(`<div id="html_7b1f6acadc895b48eebca7f9a9629173" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_f6dbd8e83e6c789d05febfffe02305a1.setContent(html_7b1f6acadc895b48eebca7f9a9629173);
+            
+        
+
+        marker_6226073d7abcae0ff808f55a775b1f98.bindPopup(popup_f6dbd8e83e6c789d05febfffe02305a1)
+        ;
+
+        
+    
+    
+            var marker_1ef44f3ffb8a3df74b3f639317db81d7 = L.marker(
+                [37.531222, 126.955055],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_2bfe0b413455ad82e55198b9a8b8e276 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1ef44f3ffb8a3df74b3f639317db81d7.setIcon(icon_2bfe0b413455ad82e55198b9a8b8e276);
+        
+    
+        var popup_769c3c500f40ea703806a38f87c69ed3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8df469859c3af2c69c9f6c3b93c94501 = $(`<div id="html_8df469859c3af2c69c9f6c3b93c94501" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_769c3c500f40ea703806a38f87c69ed3.setContent(html_8df469859c3af2c69c9f6c3b93c94501);
+            
+        
+
+        marker_1ef44f3ffb8a3df74b3f639317db81d7.bindPopup(popup_769c3c500f40ea703806a38f87c69ed3)
+        ;
+
+        
+    
+    
+            var marker_c0bf8ea0d6b5d3b39c211061be123995 = L.marker(
+                [37.532207, 126.956792],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_044c6c46fceeb4e55595132c9ab5b9ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c0bf8ea0d6b5d3b39c211061be123995.setIcon(icon_044c6c46fceeb4e55595132c9ab5b9ac);
+        
+    
+        var popup_0b5bf1849bcd6fca8bd7c005ae4eb4b5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ae045f80828134dbc71186744e98508b = $(`<div id="html_ae045f80828134dbc71186744e98508b" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_0b5bf1849bcd6fca8bd7c005ae4eb4b5.setContent(html_ae045f80828134dbc71186744e98508b);
+            
+        
+
+        marker_c0bf8ea0d6b5d3b39c211061be123995.bindPopup(popup_0b5bf1849bcd6fca8bd7c005ae4eb4b5)
+        ;
+
+        
+    
+    
+            var marker_9476c6256e3a2d2a121c348606ae3765 = L.marker(
+                [37.533197, 126.964645],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_9709ffbab08903b493d543a00b51f3d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9476c6256e3a2d2a121c348606ae3765.setIcon(icon_9709ffbab08903b493d543a00b51f3d3);
+        
+    
+        var popup_5b62cfbbc386ba39fae67877af851152 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5fa70f75d3806d281bbd0f46d6e6169e = $(`<div id="html_5fa70f75d3806d281bbd0f46d6e6169e" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_5b62cfbbc386ba39fae67877af851152.setContent(html_5fa70f75d3806d281bbd0f46d6e6169e);
+            
+        
+
+        marker_9476c6256e3a2d2a121c348606ae3765.bindPopup(popup_5b62cfbbc386ba39fae67877af851152)
+        ;
+
+        
+    
+    
+            var marker_e189979b3c7acfe5d53216df2930a344 = L.marker(
+                [37.531695, 126.968805],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_979a4942e9c0cde46b0025804c1b2059 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e189979b3c7acfe5d53216df2930a344.setIcon(icon_979a4942e9c0cde46b0025804c1b2059);
+        
+    
+        var popup_25de624562c33c3b2be1902ace62c825 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4619239c8ffb2ef5cff654951be4ba2f = $(`<div id="html_4619239c8ffb2ef5cff654951be4ba2f" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_25de624562c33c3b2be1902ace62c825.setContent(html_4619239c8ffb2ef5cff654951be4ba2f);
+            
+        
+
+        marker_e189979b3c7acfe5d53216df2930a344.bindPopup(popup_25de624562c33c3b2be1902ace62c825)
+        ;
+
+        
+    
+    
+            var marker_43d7098cac0c0cb46b3f6db0582664c8 = L.marker(
+                [37.538001, 126.967147],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_01685d46e9febaad4ad96007f78f42cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_43d7098cac0c0cb46b3f6db0582664c8.setIcon(icon_01685d46e9febaad4ad96007f78f42cd);
+        
+    
+        var popup_f5cc00a493f9232db2573f740688a63a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b224daf82c8704240771bf4ecffcd96 = $(`<div id="html_7b224daf82c8704240771bf4ecffcd96" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_f5cc00a493f9232db2573f740688a63a.setContent(html_7b224daf82c8704240771bf4ecffcd96);
+            
+        
+
+        marker_43d7098cac0c0cb46b3f6db0582664c8.bindPopup(popup_f5cc00a493f9232db2573f740688a63a)
+        ;
+
+        
+    
+    
+            var marker_5df0aae96ae559c2046d8d8f09563a8b = L.marker(
+                [37.535201, 126.963618],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_408ef8ab1b3db96d5957eab40f59ed92 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5df0aae96ae559c2046d8d8f09563a8b.setIcon(icon_408ef8ab1b3db96d5957eab40f59ed92);
+        
+    
+        var popup_e9c0d0cd7f24bcb0ad3f8c079235a82e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e31864a341746d3447b4585464eeac92 = $(`<div id="html_e31864a341746d3447b4585464eeac92" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_e9c0d0cd7f24bcb0ad3f8c079235a82e.setContent(html_e31864a341746d3447b4585464eeac92);
+            
+        
+
+        marker_5df0aae96ae559c2046d8d8f09563a8b.bindPopup(popup_e9c0d0cd7f24bcb0ad3f8c079235a82e)
+        ;
+
+        
+    
+    
+            var marker_9466635b83f63dc13b8b605f167209bf = L.marker(
+                [37.535109, 127.011499],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_c14dce14a6a15519cbb7207d1db6a9b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9466635b83f63dc13b8b605f167209bf.setIcon(icon_c14dce14a6a15519cbb7207d1db6a9b5);
+        
+    
+        var popup_639361c3d23fd89b6333fc14cdfec6e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1c0d75973c69ebb52792ac884421796d = $(`<div id="html_1c0d75973c69ebb52792ac884421796d" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_639361c3d23fd89b6333fc14cdfec6e5.setContent(html_1c0d75973c69ebb52792ac884421796d);
+            
+        
+
+        marker_9466635b83f63dc13b8b605f167209bf.bindPopup(popup_639361c3d23fd89b6333fc14cdfec6e5)
+        ;
+
+        
+    
+    
+            var marker_87c4bb04937657cc8ac905945775e5e4 = L.marker(
+                [37.540322, 126.989802],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_e5a270ee5dbfa267820acd92d1e1e900 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_87c4bb04937657cc8ac905945775e5e4.setIcon(icon_e5a270ee5dbfa267820acd92d1e1e900);
+        
+    
+        var popup_3a0b33d9af24ec97bac42daad3dc94d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a23fb4d5b7507710719891f5e5ea269e = $(`<div id="html_a23fb4d5b7507710719891f5e5ea269e" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_3a0b33d9af24ec97bac42daad3dc94d4.setContent(html_a23fb4d5b7507710719891f5e5ea269e);
+            
+        
+
+        marker_87c4bb04937657cc8ac905945775e5e4.bindPopup(popup_3a0b33d9af24ec97bac42daad3dc94d4)
+        ;
+
+        
+    
+    
+            var marker_5bf491d42e18f34178b4edbaab421531 = L.marker(
+                [37.535022, 126.997224],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_82f88f06c20216571297c8063460964d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5bf491d42e18f34178b4edbaab421531.setIcon(icon_82f88f06c20216571297c8063460964d);
+        
+    
+        var popup_1b28824dce2aeae21ea53c07c400fa1c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_389c785186f12106b4e9b497732c1ed0 = $(`<div id="html_389c785186f12106b4e9b497732c1ed0" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_1b28824dce2aeae21ea53c07c400fa1c.setContent(html_389c785186f12106b4e9b497732c1ed0);
+            
+        
+
+        marker_5bf491d42e18f34178b4edbaab421531.bindPopup(popup_1b28824dce2aeae21ea53c07c400fa1c)
+        ;
+
+        
+    
+    
+            var marker_5cf81e9346ccbe898f373ec5fc4c09bb = L.marker(
+                [37.528894, 126.964038],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_44f2e8d948abfa3a45d12a43abe8ad5d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5cf81e9346ccbe898f373ec5fc4c09bb.setIcon(icon_44f2e8d948abfa3a45d12a43abe8ad5d);
+        
+    
+        var popup_c5c9fb97e10d3fdb9595e696f7636559 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d087776b88e9973c50e9741c7ce5437 = $(`<div id="html_7d087776b88e9973c50e9741c7ce5437" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_c5c9fb97e10d3fdb9595e696f7636559.setContent(html_7d087776b88e9973c50e9741c7ce5437);
+            
+        
+
+        marker_5cf81e9346ccbe898f373ec5fc4c09bb.bindPopup(popup_c5c9fb97e10d3fdb9595e696f7636559)
+        ;
+
+        
+    
+    
+            var marker_ea2cf190999b256d84c6811237bc9028 = L.marker(
+                [37.55492, 126.968415],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_d3778122f91018dc22a67c650e9cc8f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ea2cf190999b256d84c6811237bc9028.setIcon(icon_d3778122f91018dc22a67c650e9cc8f3);
+        
+    
+        var popup_e702206598d4dd0cd4e3a6ed0afcf0b9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f5c2b1ebccf28d7f5db8a46493a1148 = $(`<div id="html_2f5c2b1ebccf28d7f5db8a46493a1148" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_e702206598d4dd0cd4e3a6ed0afcf0b9.setContent(html_2f5c2b1ebccf28d7f5db8a46493a1148);
+            
+        
+
+        marker_ea2cf190999b256d84c6811237bc9028.bindPopup(popup_e702206598d4dd0cd4e3a6ed0afcf0b9)
+        ;
+
+        
+    
+    
+            var marker_763c5da5f4f5e09224d4329fe4012ecb = L.marker(
+                [37.553965, 126.965964],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_90a900bf87f4cc2d6ee6f99f70295cbe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_763c5da5f4f5e09224d4329fe4012ecb.setIcon(icon_90a900bf87f4cc2d6ee6f99f70295cbe);
+        
+    
+        var popup_926a9416f14b91605f6dd3908983f7d9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_908508eba8453777d4102c1bc4fb9b4f = $(`<div id="html_908508eba8453777d4102c1bc4fb9b4f" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_926a9416f14b91605f6dd3908983f7d9.setContent(html_908508eba8453777d4102c1bc4fb9b4f);
+            
+        
+
+        marker_763c5da5f4f5e09224d4329fe4012ecb.bindPopup(popup_926a9416f14b91605f6dd3908983f7d9)
+        ;
+
+        
+    
+    
+            var marker_881e58ee2e1ea7d76aecc07c5a1da16b = L.marker(
+                [37.552032, 126.968943],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_afafc32a021989f1903691d25b993b8f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_881e58ee2e1ea7d76aecc07c5a1da16b.setIcon(icon_afafc32a021989f1903691d25b993b8f);
+        
+    
+        var popup_597165bbbda812bf697188ce18d47b68 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a3894799503bf9285b3877e8476fa3b4 = $(`<div id="html_a3894799503bf9285b3877e8476fa3b4" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_597165bbbda812bf697188ce18d47b68.setContent(html_a3894799503bf9285b3877e8476fa3b4);
+            
+        
+
+        marker_881e58ee2e1ea7d76aecc07c5a1da16b.bindPopup(popup_597165bbbda812bf697188ce18d47b68)
+        ;
+
+        
+    
+    
+            var marker_530fcb8916c247003fc6a2391874c395 = L.marker(
+                [37.551185, 126.96922],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_fa24ba4b3704cad36b4fcaf005389d0d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_530fcb8916c247003fc6a2391874c395.setIcon(icon_fa24ba4b3704cad36b4fcaf005389d0d);
+        
+    
+        var popup_6484e62589f68441289b68a27c13844b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d8575616ca226d5e8ea6bc5aee37eb4d = $(`<div id="html_d8575616ca226d5e8ea6bc5aee37eb4d" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_6484e62589f68441289b68a27c13844b.setContent(html_d8575616ca226d5e8ea6bc5aee37eb4d);
+            
+        
+
+        marker_530fcb8916c247003fc6a2391874c395.bindPopup(popup_6484e62589f68441289b68a27c13844b)
+        ;
+
+        
+    
+    
+            var marker_113df5834add22ece607c6fd06c169b8 = L.marker(
+                [37.54175, 126.970388],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_99b84533948bc078d3fed07fd01a2346 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_113df5834add22ece607c6fd06c169b8.setIcon(icon_99b84533948bc078d3fed07fd01a2346);
+        
+    
+        var popup_d6a390c661500f60d6788849d09d39a1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_22cdc8bc9e7a1a36d786e86b78e900c3 = $(`<div id="html_22cdc8bc9e7a1a36d786e86b78e900c3" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_d6a390c661500f60d6788849d09d39a1.setContent(html_22cdc8bc9e7a1a36d786e86b78e900c3);
+            
+        
+
+        marker_113df5834add22ece607c6fd06c169b8.bindPopup(popup_d6a390c661500f60d6788849d09d39a1)
+        ;
+
+        
+    
+    
+            var marker_1b81dbc6bf0b2276ad3fd3865b7e0adf = L.marker(
+                [37.540529, 126.972721],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_f5187906c5132ce32d96f75c9d37ee7a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1b81dbc6bf0b2276ad3fd3865b7e0adf.setIcon(icon_f5187906c5132ce32d96f75c9d37ee7a);
+        
+    
+        var popup_cd92c202f5dfdc123b1e2087c2773b71 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_06440c759e94285c863817621087885e = $(`<div id="html_06440c759e94285c863817621087885e" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_cd92c202f5dfdc123b1e2087c2773b71.setContent(html_06440c759e94285c863817621087885e);
+            
+        
+
+        marker_1b81dbc6bf0b2276ad3fd3865b7e0adf.bindPopup(popup_cd92c202f5dfdc123b1e2087c2773b71)
+        ;
+
+        
+    
+    
+            var marker_0458ba03a8db206547419eb4be445f35 = L.marker(
+                [37.548507, 126.972205],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_2f733ce2423d4756ac24d8a66b4a2130 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0458ba03a8db206547419eb4be445f35.setIcon(icon_2f733ce2423d4756ac24d8a66b4a2130);
+        
+    
+        var popup_28c1bfc8b09515c0cfe6cc5901c6304b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_97a173c33c68a7a3ab3b2c124575685e = $(`<div id="html_97a173c33c68a7a3ab3b2c124575685e" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_28c1bfc8b09515c0cfe6cc5901c6304b.setContent(html_97a173c33c68a7a3ab3b2c124575685e);
+            
+        
+
+        marker_0458ba03a8db206547419eb4be445f35.bindPopup(popup_28c1bfc8b09515c0cfe6cc5901c6304b)
+        ;
+
+        
+    
+    
+            var marker_2d3041c9e5c3d6248622f075b580273f = L.marker(
+                [37.543561, 126.971505],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_75e94cd2df79dbc9588f6687eea51959 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2d3041c9e5c3d6248622f075b580273f.setIcon(icon_75e94cd2df79dbc9588f6687eea51959);
+        
+    
+        var popup_325b1615a90b71c3915cab9553488174 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_78673f0bc59935eca74c4ae4874591d8 = $(`<div id="html_78673f0bc59935eca74c4ae4874591d8" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_325b1615a90b71c3915cab9553488174.setContent(html_78673f0bc59935eca74c4ae4874591d8);
+            
+        
+
+        marker_2d3041c9e5c3d6248622f075b580273f.bindPopup(popup_325b1615a90b71c3915cab9553488174)
+        ;
+
+        
+    
+    
+            var marker_dc1563786e74aafe594b3d3df549bd44 = L.marker(
+                [37.542611, 126.972137],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_2641e8b206a8255e49c9d9b2c8a22c18 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_dc1563786e74aafe594b3d3df549bd44.setIcon(icon_2641e8b206a8255e49c9d9b2c8a22c18);
+        
+    
+        var popup_1f55d66eb5acc3d3d790d1be5aed2e8b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dad3342e284532605ed232aa36a7dfa6 = $(`<div id="html_dad3342e284532605ed232aa36a7dfa6" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_1f55d66eb5acc3d3d790d1be5aed2e8b.setContent(html_dad3342e284532605ed232aa36a7dfa6);
+            
+        
+
+        marker_dc1563786e74aafe594b3d3df549bd44.bindPopup(popup_1f55d66eb5acc3d3d790d1be5aed2e8b)
+        ;
+
+        
+    
+    
+            var marker_2a24c81d41d5fdf2abf9ef3720098a20 = L.marker(
+                [37.541424, 126.972679],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_c60c802ad0fd0265ac8aad33150dbb78 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2a24c81d41d5fdf2abf9ef3720098a20.setIcon(icon_c60c802ad0fd0265ac8aad33150dbb78);
+        
+    
+        var popup_e23f89649fdb62ceee742d5d0a324a32 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_44b50bde597f94ecda481c09b3cfb024 = $(`<div id="html_44b50bde597f94ecda481c09b3cfb024" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_e23f89649fdb62ceee742d5d0a324a32.setContent(html_44b50bde597f94ecda481c09b3cfb024);
+            
+        
+
+        marker_2a24c81d41d5fdf2abf9ef3720098a20.bindPopup(popup_e23f89649fdb62ceee742d5d0a324a32)
+        ;
+
+        
+    
+    
+            var marker_9a28c3e77a91fce912b7f42b9662abb9 = L.marker(
+                [37.54154, 126.971791],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_bfcd040c83577e6298aa976e77a40d20 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9a28c3e77a91fce912b7f42b9662abb9.setIcon(icon_bfcd040c83577e6298aa976e77a40d20);
+        
+    
+        var popup_0ae48fc7670e81b85e8eb81b6946f584 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_72d23add65a806cec856e3d070b98da2 = $(`<div id="html_72d23add65a806cec856e3d070b98da2" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_0ae48fc7670e81b85e8eb81b6946f584.setContent(html_72d23add65a806cec856e3d070b98da2);
+            
+        
+
+        marker_9a28c3e77a91fce912b7f42b9662abb9.bindPopup(popup_0ae48fc7670e81b85e8eb81b6946f584)
+        ;
+
+        
+    
+    
+            var marker_61ee28f4ba68b255986d118f1d83f098 = L.marker(
+                [37.544739, 126.973179],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_eaf975a4f87c598f91070714315c5d70 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_61ee28f4ba68b255986d118f1d83f098.setIcon(icon_eaf975a4f87c598f91070714315c5d70);
+        
+    
+        var popup_6d6998291c7b9f07eccfe2bd38912991 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4028d2bb0259e4a7df4668f8e44ae78e = $(`<div id="html_4028d2bb0259e4a7df4668f8e44ae78e" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_6d6998291c7b9f07eccfe2bd38912991.setContent(html_4028d2bb0259e4a7df4668f8e44ae78e);
+            
+        
+
+        marker_61ee28f4ba68b255986d118f1d83f098.bindPopup(popup_6d6998291c7b9f07eccfe2bd38912991)
+        ;
+
+        
+    
+    
+            var marker_37d47168c0788e324b5b8d01d790d935 = L.marker(
+                [37.532824, 126.970666],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_df27d0672c6473286c2bfe7314b5607f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_37d47168c0788e324b5b8d01d790d935.setIcon(icon_df27d0672c6473286c2bfe7314b5607f);
+        
+    
+        var popup_d5663de9494cbc57465f82555034de36 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d9b719415f4c241e63d906d58d1a8ed4 = $(`<div id="html_d9b719415f4c241e63d906d58d1a8ed4" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_d5663de9494cbc57465f82555034de36.setContent(html_d9b719415f4c241e63d906d58d1a8ed4);
+            
+        
+
+        marker_37d47168c0788e324b5b8d01d790d935.bindPopup(popup_d5663de9494cbc57465f82555034de36)
+        ;
+
+        
+    
+    
+            var marker_05ecb62e5db0f945b231cc9087c1fda2 = L.marker(
+                [37.54096, 126.973516],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_e71ad484aa87b015a7897e090bafdaa2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_05ecb62e5db0f945b231cc9087c1fda2.setIcon(icon_e71ad484aa87b015a7897e090bafdaa2);
+        
+    
+        var popup_81e4ef2a490f4c37e9c2ae60b494aba2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1c3ab562805008d0b05ce01649ebc533 = $(`<div id="html_1c3ab562805008d0b05ce01649ebc533" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_81e4ef2a490f4c37e9c2ae60b494aba2.setContent(html_1c3ab562805008d0b05ce01649ebc533);
+            
+        
+
+        marker_05ecb62e5db0f945b231cc9087c1fda2.bindPopup(popup_81e4ef2a490f4c37e9c2ae60b494aba2)
+        ;
+
+        
+    
+    
+            var marker_c0c083a6b930ad7062f8b9a37bed10f0 = L.marker(
+                [37.541995, 126.973179],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_2e8a9cc4ad6753c0e9afe5ad1d6df012 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c0c083a6b930ad7062f8b9a37bed10f0.setIcon(icon_2e8a9cc4ad6753c0e9afe5ad1d6df012);
+        
+    
+        var popup_77b278a048b3a6eb039c6c8c071afda2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4c1ad3c2e8275047859be6ad796fe9c4 = $(`<div id="html_4c1ad3c2e8275047859be6ad796fe9c4" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_77b278a048b3a6eb039c6c8c071afda2.setContent(html_4c1ad3c2e8275047859be6ad796fe9c4);
+            
+        
+
+        marker_c0c083a6b930ad7062f8b9a37bed10f0.bindPopup(popup_77b278a048b3a6eb039c6c8c071afda2)
+        ;
+
+        
+    
+    
+            var marker_b943870fd10b7a8e809dc87ecbd21d74 = L.marker(
+                [37.5485, 126.977574],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_62dd6b3dcf066f550895841ca86c0a99 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b943870fd10b7a8e809dc87ecbd21d74.setIcon(icon_62dd6b3dcf066f550895841ca86c0a99);
+        
+    
+        var popup_4d3793a6a2914b3cff2e928259428cfd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9bc99e242fa56a8e0613316548861d9a = $(`<div id="html_9bc99e242fa56a8e0613316548861d9a" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_4d3793a6a2914b3cff2e928259428cfd.setContent(html_9bc99e242fa56a8e0613316548861d9a);
+            
+        
+
+        marker_b943870fd10b7a8e809dc87ecbd21d74.bindPopup(popup_4d3793a6a2914b3cff2e928259428cfd)
+        ;
+
+        
+    
+    
+            var marker_4504271bd9805757348660daad688eb2 = L.marker(
+                [37.54589, 126.976959],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_98ecba668f57790d95946337590240f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_4504271bd9805757348660daad688eb2.setIcon(icon_98ecba668f57790d95946337590240f4);
+        
+    
+        var popup_a941771fc874e04a1465a88bac48cf33 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_15cb0a96c7fc9eb3af4d44307545fdc3 = $(`<div id="html_15cb0a96c7fc9eb3af4d44307545fdc3" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_a941771fc874e04a1465a88bac48cf33.setContent(html_15cb0a96c7fc9eb3af4d44307545fdc3);
+            
+        
+
+        marker_4504271bd9805757348660daad688eb2.bindPopup(popup_a941771fc874e04a1465a88bac48cf33)
+        ;
+
+        
+    
+    
+            var marker_635538a843e6f6f785181f684ec07dd3 = L.marker(
+                [37.528002, 126.967632],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_c4ebba64b03ef4fe6691dfaf9c7b57d5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_635538a843e6f6f785181f684ec07dd3.setIcon(icon_c4ebba64b03ef4fe6691dfaf9c7b57d5);
+        
+    
+        var popup_dc4778ab4018b6a7ca4bedc71d52926a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_169397d5de8ac95622796132463ff073 = $(`<div id="html_169397d5de8ac95622796132463ff073" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_dc4778ab4018b6a7ca4bedc71d52926a.setContent(html_169397d5de8ac95622796132463ff073);
+            
+        
+
+        marker_635538a843e6f6f785181f684ec07dd3.bindPopup(popup_dc4778ab4018b6a7ca4bedc71d52926a)
+        ;
+
+        
+    
+    
+            var marker_eeebdf7202984b67c40e95f6d410b417 = L.marker(
+                [37.540259, 126.969626],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_b2a8580e0e65e1db38f85c025d35f7e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_eeebdf7202984b67c40e95f6d410b417.setIcon(icon_b2a8580e0e65e1db38f85c025d35f7e8);
+        
+    
+        var popup_172a9adbbb4f1952a49a266d1c180532 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f2a67bdf8f22ffdffd4d4ed484b283a = $(`<div id="html_3f2a67bdf8f22ffdffd4d4ed484b283a" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_172a9adbbb4f1952a49a266d1c180532.setContent(html_3f2a67bdf8f22ffdffd4d4ed484b283a);
+            
+        
+
+        marker_eeebdf7202984b67c40e95f6d410b417.bindPopup(popup_172a9adbbb4f1952a49a266d1c180532)
+        ;
+
+        
+    
+    
+            var marker_84a955568a52058e1ece79fc86d60fe8 = L.marker(
+                [37.529136, 126.996483],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_e7fbbc68b6bc995079c55a2d9fc5b7f2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_84a955568a52058e1ece79fc86d60fe8.setIcon(icon_e7fbbc68b6bc995079c55a2d9fc5b7f2);
+        
+    
+        var popup_ee8eabfd22bfe9e5761afad7ce754f4e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_77c7fc4491a6554b8aaef1b7a91dfaaf = $(`<div id="html_77c7fc4491a6554b8aaef1b7a91dfaaf" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_ee8eabfd22bfe9e5761afad7ce754f4e.setContent(html_77c7fc4491a6554b8aaef1b7a91dfaaf);
+            
+        
+
+        marker_84a955568a52058e1ece79fc86d60fe8.bindPopup(popup_ee8eabfd22bfe9e5761afad7ce754f4e)
+        ;
+
+        
+    
+    
+            var marker_2c0c88a3c3a60a918af7daf0c578f55c = L.marker(
+                [37.52871, 126.996226],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_3c6ea7bdcb90b14c71aabcd54a935d8c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2c0c88a3c3a60a918af7daf0c578f55c.setIcon(icon_3c6ea7bdcb90b14c71aabcd54a935d8c);
+        
+    
+        var popup_36ec9cdd3c764c1a087e628836533d80 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_00cdd39c3d6d15b0e25fe0c13e3de122 = $(`<div id="html_00cdd39c3d6d15b0e25fe0c13e3de122" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_36ec9cdd3c764c1a087e628836533d80.setContent(html_00cdd39c3d6d15b0e25fe0c13e3de122);
+            
+        
+
+        marker_2c0c88a3c3a60a918af7daf0c578f55c.bindPopup(popup_36ec9cdd3c764c1a087e628836533d80)
+        ;
+
+        
+    
+    
+            var marker_38142d5ffaf7c3b3dd5df2d41dd970bb = L.marker(
+                [37.529323, 126.995976],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_f20049a0e3533160d5a87ac519a185e1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_38142d5ffaf7c3b3dd5df2d41dd970bb.setIcon(icon_f20049a0e3533160d5a87ac519a185e1);
+        
+    
+        var popup_a9e91c66a37de3ab7a9a53cb900177c8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7fba50daab43e02db6a67b06c2bfb83 = $(`<div id="html_f7fba50daab43e02db6a67b06c2bfb83" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_a9e91c66a37de3ab7a9a53cb900177c8.setContent(html_f7fba50daab43e02db6a67b06c2bfb83);
+            
+        
+
+        marker_38142d5ffaf7c3b3dd5df2d41dd970bb.bindPopup(popup_a9e91c66a37de3ab7a9a53cb900177c8)
+        ;
+
+        
+    
+    
+            var marker_e5804554abc0788c0601b2b277325e83 = L.marker(
+                [37.529799, 126.996498],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_7b33a140427f191bdb5e3ffbd8cc4e8c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e5804554abc0788c0601b2b277325e83.setIcon(icon_7b33a140427f191bdb5e3ffbd8cc4e8c);
+        
+    
+        var popup_fa001986b575fadba0452245fd925aa6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_34c2509a2786161aa921c3c5220ba704 = $(`<div id="html_34c2509a2786161aa921c3c5220ba704" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_fa001986b575fadba0452245fd925aa6.setContent(html_34c2509a2786161aa921c3c5220ba704);
+            
+        
+
+        marker_e5804554abc0788c0601b2b277325e83.bindPopup(popup_fa001986b575fadba0452245fd925aa6)
+        ;
+
+        
+    
+    
+            var marker_cc8d0fc29e9334ebce77c82118503506 = L.marker(
+                [37.527798, 126.967138],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_81bae5b20953417ab546ea8f31cf0da6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_cc8d0fc29e9334ebce77c82118503506.setIcon(icon_81bae5b20953417ab546ea8f31cf0da6);
+        
+    
+        var popup_f454e97bf7f3a33e71e812bcefb26915 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e6a753039167744515de8b802e037dd8 = $(`<div id="html_e6a753039167744515de8b802e037dd8" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_f454e97bf7f3a33e71e812bcefb26915.setContent(html_e6a753039167744515de8b802e037dd8);
+            
+        
+
+        marker_cc8d0fc29e9334ebce77c82118503506.bindPopup(popup_f454e97bf7f3a33e71e812bcefb26915)
+        ;
+
+        
+    
+    
+            var marker_b8be9ac2be275a5958c7ca9114ffec7e = L.marker(
+                [37.532293, 126.964512],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_fe3587541852c3a81287b89e272fec9f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b8be9ac2be275a5958c7ca9114ffec7e.setIcon(icon_fe3587541852c3a81287b89e272fec9f);
+        
+    
+        var popup_98f3a21232753b60a9ae1511ee4c848b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ce06fbdd6291995a3ed33ad0e759a9a = $(`<div id="html_1ce06fbdd6291995a3ed33ad0e759a9a" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_98f3a21232753b60a9ae1511ee4c848b.setContent(html_1ce06fbdd6291995a3ed33ad0e759a9a);
+            
+        
+
+        marker_b8be9ac2be275a5958c7ca9114ffec7e.bindPopup(popup_98f3a21232753b60a9ae1511ee4c848b)
+        ;
+
+        
+    
+    
+            var marker_beca916023351ac0c319226e0749d852 = L.marker(
+                [37.532324, 126.964955],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_8bd6cd8d3e62b8c271447d9f66c85a47 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_beca916023351ac0c319226e0749d852.setIcon(icon_8bd6cd8d3e62b8c271447d9f66c85a47);
+        
+    
+        var popup_99e1ebd5764e176d4959ecf473cdd7e0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c1a8abd28d0feab4c7af0994ff4f6a2a = $(`<div id="html_c1a8abd28d0feab4c7af0994ff4f6a2a" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_99e1ebd5764e176d4959ecf473cdd7e0.setContent(html_c1a8abd28d0feab4c7af0994ff4f6a2a);
+            
+        
+
+        marker_beca916023351ac0c319226e0749d852.bindPopup(popup_99e1ebd5764e176d4959ecf473cdd7e0)
+        ;
+
+        
+    
+    
+            var marker_6e972958e52f31e50706bc3913f5cca2 = L.marker(
+                [37.553105, 126.97281],
+                {}
+            ).addTo(map_ba934e33b639d4a7e11a39c401e0c8f7);
+        
+    
+            var icon_28b26df2e4bcf3e78994996ae2fc4c7c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "smoking", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6e972958e52f31e50706bc3913f5cca2.setIcon(icon_28b26df2e4bcf3e78994996ae2fc4c7c);
+        
+    
+        var popup_1f07e25821d331b081e8d80264b9b434 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3715fa7be7d059a673248723bd801469 = $(`<div id="html_3715fa7be7d059a673248723bd801469" style="width: 100.0%; height: 100.0%;">Smoking Zone</div>`)[0];
+                popup_1f07e25821d331b081e8d80264b9b434.setContent(html_3715fa7be7d059a673248723bd801469);
+            
+        
+
+        marker_6e972958e52f31e50706bc3913f5cca2.bindPopup(popup_1f07e25821d331b081e8d80264b9b434)
+        ;
+
+        
+    
+</script>
+</html>
