@@ -21,8 +21,11 @@ Using publicly available data and coordinate mapping, we generate an interactive
 
 This version focuses on **Yongsan-gu** (용산구) only.  
 Other districts (구) may be added in future updates for city-wide analysis.
+> ⚠️ Although this project originally aimed to cover all of Seoul, public data is inconsistently available across districts.  
+> As a result, only districts with usable coordinate data are currently included.
 
 ---
+
 
 ## 🌐 Data Sources
 
