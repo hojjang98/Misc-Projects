@@ -2,134 +2,192 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 import datetime
-import matplotlib.pyplot as plt
+import os
+import altair as alt
 
 # -----------------------------
 # 1. Initialize Database
 # -----------------------------
 def init_db():
-    conn = sqlite3.connect("habits.db")
-    cur = conn.cursor()
-    cur.execute("""
-    CREATE TABLE IF NOT EXISTS habits (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        habit TEXT NOT NULL,
-        value INTEGER,
-        date TEXT NOT NULL
-    )
-    """)
-    conn.commit()
-    conn.close()
+    if not os.path.exists("workouts.db"):
+        conn = sqlite3.connect("workouts.db")
+        cur = conn.cursor()
+        cur.execute("""
+        CREATE TABLE IF NOT EXISTS workout_sets (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            date TEXT NOT NULL,
+            exercise TEXT NOT NULL,
+            set_num INTEGER,
+            reps INTEGER,
+            weight REAL,
+            note TEXT
+        )
+        """)
+        conn.commit()
+        conn.close()
 
 init_db()
 
 # -----------------------------
 # 2. DB Functions
 # -----------------------------
-def log_habit(habit: str, value: int, date: str = None):
+def log_set(exercise: str, set_num: int, reps: int, weight: float, note: str, date: str = None):
     if date is None:
         date = datetime.date.today().isoformat()
-    conn = sqlite3.connect("habits.db")
+    conn = sqlite3.connect("workouts.db")
     cur = conn.cursor()
-    cur.execute("INSERT INTO habits (habit, value, date) VALUES (?, ?, ?)",
-                (habit, value, date))
+    cur.execute("INSERT INTO workout_sets (date, exercise, set_num, reps, weight, note) VALUES (?, ?, ?, ?, ?, ?)",
+                (date, exercise, set_num, reps, weight, note))
     conn.commit()
     conn.close()
 
 def load_data():
-    conn = sqlite3.connect("habits.db")
-    df = pd.read_sql("SELECT * FROM habits", conn)
+    conn = sqlite3.connect("workouts.db")
+    df = pd.read_sql("SELECT * FROM workout_sets", conn)
     conn.close()
     return df
 
 # -----------------------------
-# 3. UI - Habit Logging
+# 3. Predefined Categories
 # -----------------------------
-st.title("🧠 Habit Time Capsule")
-
-st.header("Log a Habit")
-with st.form("habit_form"):
-    habit = st.text_input("Habit name", "")
-    value = st.number_input("Value", min_value=0, step=1)
-    date = st.date_input("Date", datetime.date.today())
-    submitted = st.form_submit_button("Save")
-
-    if submitted and habit:
-        log_habit(habit, int(value), date.isoformat())
-        st.success(f"Saved: {habit} - {value} on {date}")
+EXERCISE_CATEGORY = {
+    "Bench Press": "Chest",
+    "Incline Dumbbell Press": "Chest",
+    "Dips": "Chest/Triceps",
+    "Pull-ups": "Back",
+    "Barbell Row": "Back",
+    "Bicep Curl": "Biceps",
+    "Squat": "Legs",
+    "Deadlift": "Back/Legs",
+    "Overhead Press": "Shoulders",
+    "Lateral Raises": "Shoulders",
+    "Tricep Pushdown": "Triceps",
+    "Lunges": "Legs",
+    "Leg Press": "Legs",
+    "Running": "Cardio",
+    "Cycling": "Cardio",
+    "Burpees": "Cardio",
+    "Jump Rope": "Cardio",
+}
 
 # -----------------------------
-# 4. View Habit Records
+# 4. UI
 # -----------------------------
-st.header("Habit Records")
+st.title("🏋️ Workout Tracker Dashboard")
+
 df = load_data()
 if not df.empty:
-    st.dataframe(df)
-else:
-    st.info("No habit records yet. Add one above!")
+    df["volume"] = df["reps"] * df["weight"]
 
-# -----------------------------
-# 5. Trend Visualization
-# -----------------------------
-st.header("Habit Trends")
-if not df.empty:
-    df["date"] = pd.to_datetime(df["date"])
-    daily_trends = df.groupby(["date", "habit"])["value"].sum().reset_index()
+# Tabs
+tab1, tab2, tab3 = st.tabs(["Dashboard", "Log Workout", "Records"])
 
-    fig, ax = plt.subplots(figsize=(10, 5))
-    for habit_name in daily_trends["habit"].unique():
-        subset = daily_trends[daily_trends["habit"] == habit_name]
-        ax.plot(subset["date"], subset["value"], marker="o", label=habit_name)
+# ---- Dashboard ----
+with tab1:
+    st.header("📊 Dashboard")
 
-    ax.set_xlabel("Date")
-    ax.set_ylabel("Value")
-    ax.set_title("Habit Trends Over Time")
-    ax.legend()
-    st.pyplot(fig)
-else:
-    st.info("No data to visualize yet.")
+    if not df.empty:
+        # Weekly/Monthly stats
+        today = datetime.date.today()
+        this_week = today.isocalendar()[1]
+        this_month = today.month
 
-# -----------------------------
-# 6. Forecasting
-# -----------------------------
-st.header("Forecast Example")
-if not df.empty:
-    habit_choice = st.selectbox("Choose a habit to forecast", df["habit"].unique())
-    subset = df[df["habit"] == habit_choice].copy().sort_values("date")
-    subset["date"] = pd.to_datetime(subset["date"])
+        df["date"] = pd.to_datetime(df["date"])
+        df["week"] = df["date"].dt.isocalendar().week
+        df["month"] = df["date"].dt.month
 
-    subset["ma"] = subset["value"].rolling(window=3, min_periods=1).mean()
+        weekly_volume = df[df["week"] == this_week]["volume"].sum()
+        monthly_volume = df[df["month"] == this_month]["volume"].sum()
 
-    last_date = subset["date"].max()
-    future_dates = [last_date + datetime.timedelta(days=i) for i in range(1, 8)]
-    last_ma = subset["ma"].iloc[-1]
-    future_values = [last_ma] * len(future_dates)
+        # Example goal
+        goal_weekly = 10000
+        progress = min(weekly_volume / goal_weekly, 1.0) * 100
 
-    forecast_df = pd.DataFrame({"date": future_dates, "forecast": future_values})
+        st.metric("Weekly Volume", f"{weekly_volume:.0f} kg")
+        st.progress(progress/100, text=f"{progress:.1f}% of {goal_weekly}kg goal")
 
-    fig, ax = plt.subplots(figsize=(10, 5))
-    ax.plot(subset["date"], subset["value"], marker="o", label="Actual")
-    ax.plot(subset["date"], subset["ma"], linestyle="--", label="Moving Avg")
-    ax.plot(forecast_df["date"], forecast_df["forecast"], linestyle=":", marker="x", label="Forecast")
+        # PR Tracking
+        st.subheader("🏆 Personal Records")
+        pr_df = df.groupby("exercise")["weight"].max().reset_index()
+        st.dataframe(pr_df)
 
-    ax.set_title(f"{habit_choice} Forecast (Next 7 Days)")
-    ax.set_xlabel("Date")
-    ax.set_ylabel("Value")
-    ax.legend()
-    st.pyplot(fig)
-else:
-    st.info("No data available for forecasting.")
+        # Category Analysis
+        st.subheader("📈 Category Breakdown")
+        df["category"] = df["exercise"].map(EXERCISE_CATEGORY).fillna("Other")
+        cat_summary = df.groupby("category")["volume"].sum().reset_index()
 
-# -----------------------------
-# 7. Time Capsule
-# -----------------------------
-st.header("Time Capsule")
-capsule_message = st.text_area("Write a message to your future self")
-unlock_date = st.date_input("Unlock date", datetime.date.today())
+        cat_chart = alt.Chart(cat_summary).mark_bar().encode(
+            x="category",
+            y="volume",
+            tooltip=["category", "volume"]
+        )
+        st.altair_chart(cat_chart, use_container_width=True)
 
-if st.button("Save Capsule"):
-    import os
-    os.makedirs("reports", exist_ok=True)
-    with open("reports/time_capsule.txt", "a", encoding="utf-8") as f:
-        f.write(f"{unlock_date}: {capsule_message}\n")
-    st.success("Time capsule saved! (check reports/time_capsule.txt)")
+    else:
+        st.info("No records yet. Log your first workout!")
+
+# ---- Log Workout ----
+with tab2:
+    st.header("📝 Log a Workout")
+
+    date = st.date_input("Date", datetime.date.today())
+
+    # exercise autocomplete
+    all_exercises = list(EXERCISE_CATEGORY.keys())
+    exercise = st.selectbox("Exercise name", [""] + all_exercises)
+    if exercise == "":
+        exercise = st.text_input("Or enter custom exercise")
+
+    num_sets = st.number_input("How many sets?", min_value=1, max_value=10, step=1, value=3)
+
+    set_data = []
+    with st.form("set_form"):
+        for i in range(1, num_sets+1):
+            cols = st.columns(3)
+            reps = cols[0].number_input(f"Set {i} - Reps", min_value=0, step=1, key=f"reps_{i}")
+            weight = cols[1].number_input(f"Weight (kg)", min_value=0.0, step=2.5, key=f"weight_{i}")
+            note = cols[2].text_input("Note", key=f"note_{i}")
+            set_data.append((i, reps, weight, note))
+
+        submitted = st.form_submit_button("Save Workout")
+
+        if submitted and exercise:
+            for s in set_data:
+                log_set(exercise, s[0], s[1], s[2], s[3], date.isoformat())
+            st.success(f"Saved {exercise} with {num_sets} sets on {date}")
+            df = load_data()
+        elif submitted:
+            st.error("Please enter an exercise name!")
+
+# ---- Records ----
+with tab3:
+    st.header("📒 Workout Records")
+    if not df.empty:
+        st.subheader("Recent Records (last 10)")
+        st.dataframe(df.tail(10))
+
+        st.subheader("Summary by Exercise")
+        summary = df.groupby("exercise").agg(
+            total_sets=("set_num", "count"),
+            total_reps=("reps", "sum"),
+            total_volume=("volume", "sum")
+        ).reset_index()
+        st.dataframe(summary)
+
+        st.subheader("Visualization")
+        chart1 = alt.Chart(summary).mark_bar().encode(
+            x="exercise",
+            y="total_volume",
+            tooltip=["exercise", "total_volume"]
+        ).properties(title="Total Training Volume by Exercise")
+        st.altair_chart(chart1, use_container_width=True)
+
+        daily = df.groupby("date")["volume"].sum().reset_index()
+        chart2 = alt.Chart(daily).mark_line(point=True).encode(
+            x="date:T",
+            y="volume:Q",
+            tooltip=["date", "volume"]
+        ).properties(title="Total Training Volume Over Time")
+        st.altair_chart(chart2, use_container_width=True)
+    else:
+        st.info("No records yet.")
