@@ -8,9 +8,12 @@ import altair as alt
 # -----------------------------
 # 1. Initialize Database
 # -----------------------------
+DB_PATH = os.path.join(os.path.dirname(__file__), "workouts.db")
+
 def init_db():
-    if not os.path.exists("workouts.db"):
-        conn = sqlite3.connect("workouts.db")
+    """DB 없으면 새로 생성"""
+    if not os.path.exists(DB_PATH):
+        conn = sqlite3.connect(DB_PATH)
         cur = conn.cursor()
         cur.execute("""
         CREATE TABLE IF NOT EXISTS workout_sets (
@@ -32,9 +35,10 @@ init_db()
 # 2. DB Functions
 # -----------------------------
 def log_set(exercise: str, set_num: int, reps: int, weight: float, note: str, date: str = None):
+    """운동 세트 기록 저장"""
     if date is None:
         date = datetime.date.today().isoformat()
-    conn = sqlite3.connect("workouts.db")
+    conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
     cur.execute("INSERT INTO workout_sets (date, exercise, set_num, reps, weight, note) VALUES (?, ?, ?, ?, ?, ?)",
                 (date, exercise, set_num, reps, weight, note))
@@ -42,7 +46,8 @@ def log_set(exercise: str, set_num: int, reps: int, weight: float, note: str, da
     conn.close()
 
 def load_data():
-    conn = sqlite3.connect("workouts.db")
+    """전체 데이터 로드"""
+    conn = sqlite3.connect(DB_PATH)
     df = pd.read_sql("SELECT * FROM workout_sets", conn)
     conn.close()
     return df
@@ -87,7 +92,7 @@ with tab1:
     st.header("📊 Dashboard")
 
     if not df.empty:
-        # Weekly/Monthly stats
+        # 날짜 관련 파생
         today = datetime.date.today()
         this_week = today.isocalendar()[1]
         this_month = today.month
@@ -99,7 +104,7 @@ with tab1:
         weekly_volume = df[df["week"] == this_week]["volume"].sum()
         monthly_volume = df[df["month"] == this_month]["volume"].sum()
 
-        # Example goal
+        # 목표 예시
         goal_weekly = 10000
         progress = min(weekly_volume / goal_weekly, 1.0) * 100
 
@@ -132,7 +137,6 @@ with tab2:
 
     date = st.date_input("Date", datetime.date.today())
 
-    # exercise autocomplete
     all_exercises = list(EXERCISE_CATEGORY.keys())
     exercise = st.selectbox("Exercise name", [""] + all_exercises)
     if exercise == "":
@@ -155,7 +159,7 @@ with tab2:
             for s in set_data:
                 log_set(exercise, s[0], s[1], s[2], s[3], date.isoformat())
             st.success(f"Saved {exercise} with {num_sets} sets on {date}")
-            df = load_data()
+            st.experimental_rerun()  # 저장 후 새로고침
         elif submitted:
             st.error("Please enter an exercise name!")
 
