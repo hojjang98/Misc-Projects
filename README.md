@@ -6,7 +6,6 @@ These projects primarily focus on public data exploration, GIS visualization, an
 ---
 
 ## 🛠️ Tools & Technologies
-
 - `Python`, `Pandas`, `Folium`
 - `Jupyter Notebook`, `Open Data API`, `Geocoding APIs`
 - Basic GIS & data visualization libraries
@@ -14,15 +13,23 @@ These projects primarily focus on public data exploration, GIS visualization, an
 ---
 
 ## 🎯 Project Themes
-
 - Public/open data analysis  
 - Geographic data visualization (GIS)  
 - Urban policy and infrastructure insight  
-- One-off automation or exploration scripts
+- One-off automation or exploration scripts  
+
+---
+
+## 📂 Project Index
+
+- [Habit Time Capsule](./habit_time_capsule)  
+  *A data-driven habit tracker & future-self simulator (Streamlit + SQLite)*  
+
+- [Seoul Smoking Zone GIS](./seoul-smoking-gis)  
+  *Mapping legal smoking zones in Seoul with Folium-based visualization*  
 
 ---
 
 ## 👤 Author
-
 Maintained by [hojjang98](https://github.com/hojjang98)  
-📅 Last updated: July 2025
+📅 Last updated: September 2025

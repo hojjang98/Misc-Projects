@@ -8,7 +8,6 @@ Using publicly available data and coordinate mapping, we generate an interactive
 ---
 
 ## 🎯 Project Objectives
-
 - Collect public data on smoking zones from Seoul city  
 - Convert address-based data to geographic coordinates (geocoding)  
 - Visualize the spatial distribution on an interactive map  
@@ -18,23 +17,22 @@ Using publicly available data and coordinate mapping, we generate an interactive
 ---
 
 ## 📍 Current Scope
-
 This version covers **two districts only**:
 - **Yongsan-gu** (용산구)  
 - **Yeongdeungpo-gu** (영등포구)
 
-> ⚠️ Although the original goal was to map smoking zones for **all 25 districts** of Seoul, only a **very small subset (fewer than 5 districts)** had usable, publicly available data.  
-> During data collection, we found that:
-> - Many districts provided **no smoking zone data at all**
-> - Some shared **incomplete, unstructured, or non-machine-readable datasets**
-> - Several datasets included vague descriptions like "station front" or "park area" with no geocodable address  
+> ⚠️ The original goal was to map smoking zones across **all 25 districts of Seoul**.  
+> However, during data collection we discovered that:
+> - Many districts provided **no public data at all**  
+> - Some datasets were **incomplete or unstructured** (e.g., vague descriptions like "station front")  
+> - Several sources were **not machine-readable or not suitable for geocoding**  
 >  
-> As a result, only districts with sufficient and clean address data were included in this version.
+> Because of these limitations, only districts with **sufficient and clean address data** were included in this version.  
+> As a result, the analysis is currently **limited to two districts**, and the results cannot be generalized to all of Seoul.
 
 ---
 
 ## 🌐 Data Sources
-
 - [서울 열린데이터 광장 (Seoul Open Data Portal)](https://data.seoul.go.kr)  
 - [공공데이터 포털 (data.go.kr)](https://www.data.go.kr)  
 - [Nominatim Geocoder (OpenStreetMap)](https://nominatim.org)  
@@ -42,7 +40,6 @@ This version covers **two districts only**:
 ---
 
 ## 🔧 Tech Stack
-
 - `pandas`: data wrangling  
 - `folium`: interactive mapping (Leaflet.js)  
 - `geopy`: address-to-coordinate geocoding  
@@ -52,41 +49,36 @@ This version covers **two districts only**:
 ---
 
 ## 🧱 Folder Structure
-
 ```bash
+
 seoul-smoking-gis/
 ├── Data/                        # Raw and processed datasets (e.g., Yongsan CSV)
 ├── Output/                      # Generated HTML maps
-├── Yongsan-gu Smoking Zone Mapping.ipynb  # Main notebook
-├── requirements.txt             # Python dependencies
-├── .gitignore                   # Ignore notebook checkpoints
+├── notebooks/
+│   └── Seoul_SmokingZones_Yongsan_Yeongdeungpo.ipynb
+├── requirements.txt
+├── .gitignore
 └── README.md
+
 ```
 
-
----
-
 ## 🚀 How to Run
+```bash
 
 1. **Install dependencies**  
-   Make sure the following Python packages are installed:
-   - pandas  
-   - folium  
-   - geopy  
-
-   Example command:  
-   ```bash
+   Make sure the required Python packages are installed:
+   
    pip install pandas folium geopy
-   ```
-
-2. **Open the notebook**  
-   Launch Jupyter Notebook or VS Code and open:  
-   `Yongsan-gu Smoking Zone Mapping.ipynb`
-
-3. **Run all cells**  
+2. Open the notebook
+   Navigate to the notebooks/ directory and open:
+   notebooks/Seoul_SmokingZones_Yongsan_Yeongdeungpo.ipynb
+3. Run all cells
    The notebook will:
-   - 📂 Load the public smoking zone dataset from the `Data/` folder  
-   - 🌐 Perform geocoding if latitude/longitude is missing  
-   - 🗺️ Generate an interactive map using Folium  
-   - 💾 Save the map to `Output/yongsan_smoking_zones_map.html`  
-   - 🌍 Automatically open the map in your default web browser
+   📂 Load the smoking zone dataset from the Data/ folder
+   🌐 Perform geocoding if latitude/longitude is missing
+   🗺️ Generate an interactive map with Folium
+   💾 Save the map to Output/ (e.g., yongsan_smoking_zones_map.html)
+   🌍 Automatically open the map in your default web browser
+
+```
+
